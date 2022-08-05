@@ -2,7 +2,7 @@
 - name: Install Nginx (Ubuntu/Debian)
   apt:
     name: "{{ nginx_package_name }}"
-    state: {{ present if nginx_version != 'latest' else latest }}
+    state: {{ 'present' if nginx_version != 'latest' else 'latest' }}
     update_cache: yes
     allow_downgrade: yes
   when: ansible_os_family == 'Debian'
