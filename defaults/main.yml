@@ -1,5 +1,5 @@
 ---
-nginx_package_name: nginx
+nginx_package_name: nginx={{ nginx_version | default('stable') }}
 nginx_service_name: nginx
 
 nginx_apt_repo: "deb http://nginx.org/packages/ubuntu/ {{ ansible_distribution_release }} nginx"

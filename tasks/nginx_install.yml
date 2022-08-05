@@ -4,6 +4,7 @@
     name: "{{ nginx_package_name }}"
     state: present
     update_cache: yes
+    force: True
   when: ansible_os_family == 'Debian'
 
 - name: Install Nginx (CentOS/RHEL)
