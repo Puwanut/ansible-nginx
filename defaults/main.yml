@@ -1,5 +1,5 @@
 ---
-nginx_package_name: "{{ 'nginx=' + nginx_version + '~' + ansible_distribution_release if nginx_version != 'latest' else 'nginx' }}"
+nginx_package_name: "{{ 'nginx=' + nginx_version + '~' + ansible_distribution_release if nginx_version != 'stable' else 'nginx=stable' }}"
 nginx_service_name: nginx
 
 nginx_apt_repo: "deb http://nginx.org/packages/ubuntu/ {{ ansible_distribution_release }} nginx"
